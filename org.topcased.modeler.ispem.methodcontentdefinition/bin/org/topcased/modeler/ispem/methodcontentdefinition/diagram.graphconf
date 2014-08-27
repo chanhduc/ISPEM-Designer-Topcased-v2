@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphconf:DiagramGraphConf xmlns:graphconf="http://www.topcased.org/1.0/graphconf"
+    id="org.topcased.modeler.ispem.methodcontentdefinition"
+    defaultBackgroundColor="255,255,255"
+    defaultForegroundColor="0,0,0"
+    defaultFont="Segoe UI-regular-9">
+    <node
+        presentation="default"
+        defaultHeight="50"
+        defaultWidth="50"
+        minimumHeight="20"
+        minimumWidth="20"
+        maximumHeight="200"
+        maximumWidth="200"
+        defaultBackgroundColor="255,255,255"
+        defaultForegroundColor="0,0,0"
+        defaultFont="Segoe UI-regular-9"
+        lineWidth="1"
+        lineStyle="SOLID"
+        isWidthResizable="true"
+        isHeightResizable="true">
+        <bridge xsi:type="graphconf:EMFBridge">
+            <type href="http://www.topcased.org/ispem#//TaskDefinition"/>
+        </bridge>
+    </node>
+    <node
+        presentation="default"
+        defaultHeight="50"
+        defaultWidth="50"
+        minimumHeight="20"
+        minimumWidth="20"
+        maximumHeight="200"
+        maximumWidth="200"
+        defaultBackgroundColor="255,255,255"
+        defaultForegroundColor="0,0,0"
+        defaultFont="Segoe UI-regular-9"
+        lineWidth="1"
+        lineStyle="SOLID"
+        isWidthResizable="true"
+        isHeightResizable="true">
+        <bridge xsi:type="graphconf:EMFBridge">
+            <type href="http://www.thalesgroup.com/spem/2.0#//RoleDefinition"/>
+        </bridge>
+    </node>
+    <node
+        presentation="default"
+        defaultHeight="50"
+        defaultWidth="50"
+        minimumHeight="20"
+        minimumWidth="20"
+        maximumHeight="200"
+        maximumWidth="200"
+        defaultBackgroundColor="255,255,255"
+        defaultForegroundColor="0,0,0"
+        defaultFont="Segoe UI-regular-9"
+        lineWidth="1"
+        lineStyle="SOLID"
+        isWidthResizable="true"
+        isHeightResizable="true">
+        <bridge xsi:type="graphconf:EMFBridge">
+            <type href="http://www.topcased.org/ispem#//WorkProductDefinition"/>
+        </bridge>
+    </node>
+    <node
+        presentation="default"
+        defaultHeight="50"
+        defaultWidth="50"
+        minimumHeight="20"
+        minimumWidth="20"
+        maximumHeight="200"
+        maximumWidth="200"
+        defaultBackgroundColor="255,255,255"
+        defaultForegroundColor="0,0,0"
+        defaultFont="Segoe UI-regular-9"
+        lineWidth="1"
+        lineStyle="SOLID"
+        isWidthResizable="true"
+        isHeightResizable="true">
+        <bridge xsi:type="graphconf:EMFBridge">
+            <type href="http://www.topcased.org/ispem#//ToolDefinition"/>
+        </bridge>
+    </node>
+    <edge
+        presentation="default"
+        defaultForegroundColor="0,0,0"
+        defaultFont="Segoe UI-regular-9"
+        defaultRouter="ObliqueRouter"
+        lineWidth="2"
+        lineStyle="SOLID">
+        <bridge xsi:type="graphconf:EMFBridge">
+            <type href="http://www.thalesgroup.com/spem/2.0#//Default_TaskDefinitionParameter"/>
+        </bridge>
+        <constraint language="ocl" rule="self.direction = ParameterDirectionKind::_in"/>
+    </edge>
+    <edge
+        presentation="default"
+        defaultForegroundColor="0,0,0"
+        defaultFont="Segoe UI-regular-9"
+        defaultRouter="ObliqueRouter"
+        lineWidth="2"
+        lineStyle="SOLID">
+        <bridge xsi:type="graphconf:EMFBridge">
+            <type href="http://www.thalesgroup.com/spem/2.0#//Default_TaskDefinitionParameter"/>
+        </bridge>
+        <constraint language="ocl" rule="self.direction = ParameterDirectionKind::out"/>
+    </edge>
+    <edge
+        presentation="default"
+        defaultForegroundColor="0,0,0"
+        defaultFont="Segoe UI-regular-9"
+        defaultRouter="ObliqueRouter"
+        lineWidth="2"
+        lineStyle="SOLID">
+        <bridge xsi:type="graphconf:EMFBridge">
+            <type href="http://www.thalesgroup.com/spem/2.0#//Default_TaskDefinitionParameter"/>
+        </bridge>
+        <constraint language="ocl" rule="self.direction = ParameterDirectionKind::inout"/>
+    </edge>
+    <edge
+        presentation="default"
+        defaultForegroundColor="255,128,0"
+        defaultFont="Segoe UI-regular-9"
+        defaultRouter="ObliqueRouter"
+        lineWidth="2"
+        lineStyle="SOLID">
+        <bridge xsi:type="graphconf:EMFBridge">
+            <type href="http://www.thalesgroup.com/spem/2.0#//Default_TaskDefinitionPerformer"/>
+        </bridge>
+    </edge>
+    <edge
+        presentation="default"
+        defaultForegroundColor="0,128,255"
+        defaultFont="Segoe UI-regular-9"
+        defaultRouter="ObliqueRouter"
+        lineWidth="2"
+        lineStyle="SOLID">
+        <bridge xsi:type="graphconf:EMFBridge">
+            <type href="http://www.thalesgroup.com/spem/2.0#//Default_ResponsibilityAssignment"/>
+        </bridge>
+    </edge>
+    <edge
+        presentation="default"
+        defaultForegroundColor="0,128,255"
+        defaultFont="Segoe UI-regular-9"
+        defaultRouter="ObliqueRouter"
+        lineWidth="2"
+        lineStyle="SOLID">
+        <bridge xsi:type="graphconf:StringBridge" type="WorkProductManagement"/>
+    </edge>
+    <edge
+        presentation="default"
+        defaultForegroundColor="255,128,64"
+        defaultFont="Segoe UI-regular-9"
+        defaultRouter="ObliqueRouter"
+        lineWidth="2"
+        lineStyle="SOLID">
+        <bridge xsi:type="graphconf:StringBridge" type="ToolUse"/>
+    </edge>
+</graphconf:DiagramGraphConf>
+

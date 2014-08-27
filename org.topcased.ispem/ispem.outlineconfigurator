@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<outlineconfigurator:OutlineConfiguration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:outlineconfigurator="http://www.topcased.org/OutlineConfigurator/1.0" name="iSPEM outline" projectName="org.topcased.modeler.ispem.outline" package="org.topcased.modeler.ispem.outline" pluginClassName="Outline">
+  <createChild className="iSPEMCreateChildMenu">
+    <items xsi:type="outlineconfigurator:MenuGroup" id="AddDiagram"/>
+    <items xsi:type="outlineconfigurator:Menu" id="AddActivityDiagram" name="Activity Diagram">
+      <items xsi:type="outlineconfigurator:CreateChildAction">
+        <class href="Models/ispem.genmodel#//ispem/Activity"/>
+      </items>
+    </items>
+  </createChild>
+  <genPackage href="Models/ispem.genmodel#//ispem"/>
+</outlineconfigurator:OutlineConfiguration>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ASCII"?>
+<eef-gen:EEFGenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:eef-gen="http://www.eclipse.org/emf/eef/generation/1.0.0" genDirectory="/org.topcased.ispem.eef.edit/src-gen">
+  <editionContexts basePackage="org.topcased" descriptorsGenericPropertiesViews="true">
+    <PropertiesEditionContext href="ispem.components#_4_CwwPIPEeOsCZFKcGeOJA"/>
+  </editionContexts>
+  <editionContexts basePackage="org.topcased" descriptorsGenericPropertiesViews="true">
+    <PropertiesEditionContext href="ispem.components#_4_EmpfIPEeOsCZFKcGeOJA"/>
+  </editionContexts>
+  <editionContexts basePackage="org.topcased.spem" descriptorsGenericPropertiesViews="true">
+    <PropertiesEditionContext href="ispem.components#_4_F0ifIPEeOsCZFKcGeOJA"/>
+  </editionContexts>
+  <editionContexts basePackage="org.topcased.spem" descriptorsGenericPropertiesViews="true">
+    <PropertiesEditionContext href="ispem.components#_4_Hp4_IPEeOsCZFKcGeOJA"/>
+  </editionContexts>
+  <viewsRepositories basePackage="org.topcased.spem.activity" swtViews="true" formViews="true">
+    <viewsRepository href="ispem.components#_4_IQl_IPEeOsCZFKcGeOJA"/>
+  </viewsRepositories>
+  <viewsRepositories basePackage="org.topcased.spem.uma" swtViews="true" formViews="true">
+    <viewsRepository href="ispem.components#_4_IRGPIPEeOsCZFKcGeOJA"/>
+  </viewsRepositories>
+  <viewsRepositories basePackage="org.topcased.ispem" swtViews="true" formViews="true">
+    <viewsRepository href="ispem.components#_4_JfCvIPEeOsCZFKcGeOJA"/>
+  </viewsRepositories>
+  <viewsRepositories basePackage="org.topcased.spem" swtViews="true" formViews="true">
+    <viewsRepository href="ispem.components#_4_Kst_IPEeOsCZFKcGeOJA"/>
+  </viewsRepositories>
+</eef-gen:EEFGenModel>

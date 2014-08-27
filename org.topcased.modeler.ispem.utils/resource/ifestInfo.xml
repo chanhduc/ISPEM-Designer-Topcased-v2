@@ -1,0 +1,22 @@
+<ifests>
+<class>
+<process_activity uri="http://www.obeonetwork.org/ontologies/spem/ifest.owl#ProcessActivity">
+</process_activity>
+<engineering_domain uri="http://www.obeonetwork.org/ontologies/spem/ifest.owl#EngineeringDomain">
+</engineering_domain>
+<viewpoint uri="http://www.obeonetwork.org/ontologies/spem/ifest.owl#Viewpoint">
+</viewpoint>
+<tool uri="http://www.obeonetwork.org/ontologies/spem/ifest.owl#Tool">
+</tool>
+<tooltype uri="http://www.obeonetwork.org/ontologies/spem/ifest.owl#ToolType">
+</tooltype>
+<artifact uri="http://www.obeonetwork.org/ontologies/spem/ifest.owl#Artifact"/>
+</class>
+<objectProperties>
+<haveViewpoints uri="http://www.obeonetwork.org/ontologies/spem/ifest.owl#haveViewpoint">
+</haveViewpoints>
+</objectProperties>
+<dataProperties>
+<name uri="http://www.obeonetwork.org/ontologies/spem/ifest.owl#Name"/>
+</dataProperties>
+</ifests>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin
+   id="org.topcased.modeler.ispem.outline"
+   name="iSPEM outline"
+   version="1.0"
+   provider-name="Topcased"
+   class="org.topcased.modeler.ispem.outline.Outline">
+
+   <runtime>
+      <library name="org.topcased.modeler.ispem.outline.jar">
+         <export name="*"/>
+      </library>
+   </runtime>
+
+   <requires>
+   	  <import plugin="org.eclipse.core.resources"/>
+   	  <import plugin="org.eclipse.core.runtime"/>
+   	  <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.emf.ecore.edit"/>
+      <import plugin="org.eclipse.jface"/>
+      <import plugin="org.topcased.modeler"/>
+      <import plugin="org.topcased.ispem"/>
+   </requires>   
+</plugin>

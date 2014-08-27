@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagramconfigurator:DiagramConfiguration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diagramconfigurator="http://www.topcased.org/diagramconfigurator/0.10" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmi:id="_PjO2ULzREeOiz_iWbv7YrQ" projectName="org.topcased.modeler.ispem.domainContDef" name="Domain Content Definition Diagram" package="org.topcased.modeler.ispem.domainContDef" prefix="DomainContDefDiag">
+  <palette xmi:id="_5VEDoLzTEeO97ecuGZTBKw" name="palette">
+    <paletteCategories xmi:id="_8jQd8LzTEeO97ecuGZTBKw" name="Node">
+      <items xmi:id="_-_qO8LzTEeO97ecuGZTBKw" name="Create Task" part="_wZAHkbzTEeO97ecuGZTBKw"/>
+      <items xmi:id="_wY0PcLzVEeO97ecuGZTBKw" name="Create Artifact" part="_NqcoYLzUEeO97ecuGZTBKw"/>
+    </paletteCategories>
+    <paletteCategories xmi:id="_uEqbgLzVEeO97ecuGZTBKw" name="Edge">
+      <items xmi:id="_vEfg0LzVEeO97ecuGZTBKw" name="Parameter In" part="_Wtt_sLzUEeO97ecuGZTBKw"/>
+      <items xmi:id="__CTBULzVEeO97ecuGZTBKw" name="Parameter Out" part="_Wtt_sLzUEeO97ecuGZTBKw"/>
+      <items xmi:id="__JufALzVEeO97ecuGZTBKw" name="Parameter InOut" part="_Wtt_sLzUEeO97ecuGZTBKw"/>
+    </paletteCategories>
+  </palette>
+  <parts xsi:type="diagramconfigurator:NodePartConfiguration" xmi:id="_wZAHkbzTEeO97ecuGZTBKw" object="_xEGTALzTEeO97ecuGZTBKw" type="Graphic With Bottom Label"/>
+  <parts xsi:type="diagramconfigurator:NodePartConfiguration" xmi:id="_NqcoYLzUEeO97ecuGZTBKw" object="_QLELALzUEeO97ecuGZTBKw" type="Graphic With Bottom Label"/>
+  <parts xsi:type="diagramconfigurator:EdgePartConfiguration" xmi:id="_Wtt_sLzUEeO97ecuGZTBKw" object="_UfP9ALzUEeO97ecuGZTBKw">
+    <sourceTargetCouple xmi:id="_mO7q0LzUEeO97ecuGZTBKw" containerType="SOURCE" sourceNode="_wZAHkbzTEeO97ecuGZTBKw" targetNode="_NqcoYLzUEeO97ecuGZTBKw">
+      <containerObject href="Models/ispem.genmodel#//ispem/DomainTaskDefinition"/>
+      <containerRef xsi:type="ecore:EReference" href="Models/spem2.ecore#//TaskDefinition/ownedTaskDefinitionParameter"/>
+      <refSourceToEdge xsi:type="ecore:EReference" href="Models/spem2.ecore#//TaskDefinition/ownedTaskDefinitionParameter"/>
+      <refEdgeToTarget xsi:type="ecore:EReference" href="Models/spem2.ecore#//Default_TaskDefinitionParameter/parameterType"/>
+    </sourceTargetCouple>
+  </parts>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_HdFZILzSEeOiz_iWbv7YrQ">
+    <genClass href="Models/ispem.genmodel#//spem/MethodContentPackage"/>
+  </objects>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_xEGTALzTEeO97ecuGZTBKw">
+    <genClass href="Models/ispem.genmodel#//ispem/DomainTaskDefinition"/>
+  </objects>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_QLELALzUEeO97ecuGZTBKw">
+    <genClass href="Models/ispem.genmodel#//ispem/DomainArtifactDefinition"/>
+  </objects>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_UfP9ALzUEeO97ecuGZTBKw">
+    <genClass href="Models/ispem.genmodel#//spem/Default_TaskDefinitionParameter"/>
+  </objects>
+  <genModel href="Models/ispem.genmodel#/"/>
+  <templateRootObject href="Models/ispem.genmodel#//spem/MethodContentPackage"/>
+  <editorConfigurator href="iSpem.editorconfigurator#_sWrKUbzCEeOiz_iWbv7YrQ"/>
+</diagramconfigurator:DiagramConfiguration>

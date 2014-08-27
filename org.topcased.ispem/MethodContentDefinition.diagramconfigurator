@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagramconfigurator:DiagramConfiguration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diagramconfigurator="http://www.topcased.org/diagramconfigurator/0.10" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmi:id="_CHXPAO4REeOevYahQfJjvg" projectName="org.topcased.modeler.ispem.methodcontentdefinition" name="Method Content Definition Diagram" package="org.topcased.modeler.ispem.methodcontentdefinition" prefix="MethodContentDefinition">
+  <palette xmi:id="_3rlGgPJLEeOKhe67t1mkyw" name="Palette">
+    <paletteCategories xmi:id="_5HHQYPJLEeOKhe67t1mkyw" name="MethodContentElement">
+      <items xmi:id="_BuLz4PJMEeOKhe67t1mkyw" name="Task Definition" part="_HY1w8PJJEeOKhe67t1mkyw"/>
+      <items xmi:id="_EX-goPJMEeOKhe67t1mkyw" name="Role Definition" part="_Ufh6YPJJEeOKhe67t1mkyw"/>
+      <items xmi:id="_G5GZkPJMEeOKhe67t1mkyw" name="Work Product Definition" part="_WBvUAPJJEeOKhe67t1mkyw"/>
+      <items xmi:id="_B8PVMPLUEeOKhe67t1mkyw" name="Tool Definition" part="_W0HzMPJJEeOKhe67t1mkyw"/>
+    </paletteCategories>
+    <paletteCategories xmi:id="_9P0LIPJLEeOKhe67t1mkyw" name="MethodContentRelationship">
+      <items xmi:id="_N6O6APJMEeOKhe67t1mkyw" name="Task Parameter In" part="_tv058PJJEeOKhe67t1mkyw"/>
+      <items xmi:id="_YhqLsPJMEeOKhe67t1mkyw" name="Task Parameter Out" part="_3Mcv8PJKEeOKhe67t1mkyw"/>
+      <items xmi:id="_aLwWAPJMEeOKhe67t1mkyw" name="Task Parameter InOut" part="_3jXbIPJKEeOKhe67t1mkyw"/>
+      <items xmi:id="_cKFD4PJMEeOKhe67t1mkyw" name="Task Performer" part="_WYNoYPJLEeOKhe67t1mkyw"/>
+      <items xmi:id="_fngNAPJMEeOKhe67t1mkyw" name="Assign Work Product Responsibility" part="_uclAUPJLEeOKhe67t1mkyw"/>
+      <items xmi:id="_c8wSAPLQEeOKhe67t1mkyw" name="Use Tool" part="_4Cu2QPLPEeOKhe67t1mkyw"/>
+      <items xmi:id="_gzFDUPLQEeOKhe67t1mkyw" name="Manage Work Product Definition" part="_R0lqwPLQEeOKhe67t1mkyw"/>
+    </paletteCategories>
+  </palette>
+  <parts xsi:type="diagramconfigurator:NodePartConfiguration" xmi:id="_HY1w8PJJEeOKhe67t1mkyw" object="_OyGIYPJHEeOKhe67t1mkyw" type="Graphic With Bottom Label"/>
+  <parts xsi:type="diagramconfigurator:NodePartConfiguration" xmi:id="_Ufh6YPJJEeOKhe67t1mkyw" object="_S6dr8PJHEeOKhe67t1mkyw" type="Graphic With Bottom Label"/>
+  <parts xsi:type="diagramconfigurator:NodePartConfiguration" xmi:id="_WBvUAPJJEeOKhe67t1mkyw" object="_oUougPJHEeOKhe67t1mkyw" type="Graphic With Bottom Label"/>
+  <parts xsi:type="diagramconfigurator:NodePartConfiguration" xmi:id="_W0HzMPJJEeOKhe67t1mkyw" object="_rvg58PJHEeOKhe67t1mkyw" type="Graphic With Bottom Label"/>
+  <parts xsi:type="diagramconfigurator:EdgePartConfiguration" xmi:id="_tv058PJJEeOKhe67t1mkyw" object="_v9jyQPJIEeOKhe67t1mkyw" lineWidth="2" prefix="Default_TaskDefinitionParameterIn" sourceDecoration="ARROW">
+    <constraint xmi:id="_zcMKYPJKEeOKhe67t1mkyw" language="ocl" rule="self.direction = ParameterDirectionKind::_in"/>
+    <sourceTargetCouple xmi:id="_0OeYYPJJEeOKhe67t1mkyw" containerType="SOURCE" sourceNode="_HY1w8PJJEeOKhe67t1mkyw" targetNode="_WBvUAPJJEeOKhe67t1mkyw">
+      <containerObject href="Models/ispem.genmodel#//ispem/TaskDefinition"/>
+      <containerRef xsi:type="ecore:EReference" href="Models/spem2.ecore#//TaskDefinition/ownedTaskDefinitionParameter"/>
+      <refSourceToEdge xsi:type="ecore:EReference" href="Models/spem2.ecore#//WorkDefinition/ownedParameter"/>
+      <refEdgeToTarget xsi:type="ecore:EReference" href="Models/spem2.ecore#//Default_TaskDefinitionParameter/parameterType"/>
+    </sourceTargetCouple>
+  </parts>
+  <parts xsi:type="diagramconfigurator:EdgePartConfiguration" xmi:id="_3Mcv8PJKEeOKhe67t1mkyw" object="_v9jyQPJIEeOKhe67t1mkyw" lineWidth="2" prefix="Default_TaskDefinitionParameterOut" targetDecoration="ARROW">
+    <constraint xmi:id="_3MdXAPJKEeOKhe67t1mkyw" language="ocl" rule="self.direction = ParameterDirectionKind::out"/>
+    <sourceTargetCouple xmi:id="_3MdXAfJKEeOKhe67t1mkyw" containerType="SOURCE" sourceNode="_HY1w8PJJEeOKhe67t1mkyw" targetNode="_WBvUAPJJEeOKhe67t1mkyw">
+      <containerObject href="Models/ispem.genmodel#//ispem/TaskDefinition"/>
+      <containerRef xsi:type="ecore:EReference" href="Models/spem2.ecore#//TaskDefinition/ownedTaskDefinitionParameter"/>
+      <refSourceToEdge xsi:type="ecore:EReference" href="Models/spem2.ecore#//WorkDefinition/ownedParameter"/>
+      <refEdgeToTarget xsi:type="ecore:EReference" href="Models/spem2.ecore#//Default_TaskDefinitionParameter/parameterType"/>
+    </sourceTargetCouple>
+  </parts>
+  <parts xsi:type="diagramconfigurator:EdgePartConfiguration" xmi:id="_3jXbIPJKEeOKhe67t1mkyw" object="_v9jyQPJIEeOKhe67t1mkyw" lineWidth="2" prefix="Default_TaskDefinitionParameterInOut" sourceDecoration="ARROW" targetDecoration="ARROW">
+    <constraint xmi:id="_3jXbIfJKEeOKhe67t1mkyw" language="ocl" rule="self.direction = ParameterDirectionKind::inout"/>
+    <sourceTargetCouple xmi:id="_3jXbIvJKEeOKhe67t1mkyw" containerType="SOURCE" sourceNode="_HY1w8PJJEeOKhe67t1mkyw" targetNode="_WBvUAPJJEeOKhe67t1mkyw">
+      <containerObject href="Models/ispem.genmodel#//ispem/TaskDefinition"/>
+      <containerRef xsi:type="ecore:EReference" href="Models/spem2.ecore#//TaskDefinition/ownedTaskDefinitionParameter"/>
+      <refSourceToEdge xsi:type="ecore:EReference" href="Models/spem2.ecore#//WorkDefinition/ownedParameter"/>
+      <refEdgeToTarget xsi:type="ecore:EReference" href="Models/spem2.ecore#//Default_TaskDefinitionParameter/parameterType"/>
+    </sourceTargetCouple>
+  </parts>
+  <parts xsi:type="diagramconfigurator:EdgePartConfiguration" xmi:id="_WYNoYPJLEeOKhe67t1mkyw" object="_rCEvsPJIEeOKhe67t1mkyw" defaultForegroundColor="255,128,0" lineWidth="2" targetDecoration="ARROW">
+    <sourceTargetCouple xmi:id="_sFVcIPJLEeOKhe67t1mkyw" containerType="DIAGRAM" sourceNode="_Ufh6YPJJEeOKhe67t1mkyw" targetNode="_HY1w8PJJEeOKhe67t1mkyw">
+      <containerObject href="Models/ispem.genmodel#//spem/MethodContentPackage"/>
+      <containerRef xsi:type="ecore:EReference" href="Models/spem2.ecore#//MethodContentPackage/ownedMethodContentMember"/>
+      <refEdgeToSource xsi:type="ecore:EReference" href="Models/spem2.ecore#//Default_TaskDefinitionPerformer/linkedRoleDefinition"/>
+      <refEdgeToTarget xsi:type="ecore:EReference" href="Models/spem2.ecore#//Default_TaskDefinitionPerformer/linkedTaskDefinition"/>
+    </sourceTargetCouple>
+  </parts>
+  <parts xsi:type="diagramconfigurator:EdgePartConfiguration" xmi:id="_uclAUPJLEeOKhe67t1mkyw" object="_tC5_APJIEeOKhe67t1mkyw" defaultForegroundColor="0,128,255" lineWidth="2" targetDecoration="ARROW">
+    <sourceTargetCouple xmi:id="_2Agr0PJLEeOKhe67t1mkyw" containerType="DIAGRAM" sourceNode="_Ufh6YPJJEeOKhe67t1mkyw" targetNode="_WBvUAPJJEeOKhe67t1mkyw">
+      <containerObject href="Models/ispem.genmodel#//spem/MethodContentPackage"/>
+      <containerRef xsi:type="ecore:EReference" href="Models/spem2.ecore#//MethodContentPackage/ownedMethodContentMember"/>
+      <refEdgeToSource xsi:type="ecore:EReference" href="Models/spem2.ecore#//Default_ResponsibilityAssignment/linkedRoleDefinition"/>
+      <refEdgeToTarget xsi:type="ecore:EReference" href="Models/spem2.ecore#//Default_ResponsibilityAssignment/linkedWorkProductDefinition"/>
+    </sourceTargetCouple>
+  </parts>
+  <parts xsi:type="diagramconfigurator:EdgePartConfiguration" xmi:id="_R0lqwPLQEeOKhe67t1mkyw" object="_NxBusPLQEeOKhe67t1mkyw" defaultForegroundColor="0,128,255" lineWidth="2" targetDecoration="TRIANGLE">
+    <sourceTargetCouple xmi:id="_Wpvb0PLQEeOKhe67t1mkyw" sourceNode="_W0HzMPJJEeOKhe67t1mkyw" targetNode="_WBvUAPJJEeOKhe67t1mkyw">
+      <refSourceToTarget xsi:type="ecore:EReference" href="Models/spem2.ecore#//ToolDefinition/managedWorkProduct"/>
+    </sourceTargetCouple>
+  </parts>
+  <parts xsi:type="diagramconfigurator:EdgePartConfiguration" xmi:id="_4Cu2QPLPEeOKhe67t1mkyw" object="_6WlvQPLPEeOKhe67t1mkyw" defaultForegroundColor="255,128,64" lineWidth="2" targetDecoration="TRIANGLE">
+    <sourceTargetCouple xmi:id="_BnrXQPLQEeOKhe67t1mkyw" sourceNode="_HY1w8PJJEeOKhe67t1mkyw" targetNode="_W0HzMPJJEeOKhe67t1mkyw">
+      <refSourceToTarget xsi:type="ecore:EReference" href="Models/spem2.ecore#//TaskDefinition/usedTool"/>
+    </sourceTargetCouple>
+  </parts>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_OyGIYPJHEeOKhe67t1mkyw">
+    <genClass href="Models/ispem.genmodel#//ispem/TaskDefinition"/>
+  </objects>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_S6dr8PJHEeOKhe67t1mkyw">
+    <genClass href="Models/ispem.genmodel#//spem/RoleDefinition"/>
+  </objects>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_oUougPJHEeOKhe67t1mkyw">
+    <genClass href="Models/ispem.genmodel#//ispem/WorkProductDefinition"/>
+  </objects>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_rvg58PJHEeOKhe67t1mkyw">
+    <genClass href="Models/ispem.genmodel#//ispem/ToolDefinition"/>
+  </objects>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_rCEvsPJIEeOKhe67t1mkyw">
+    <genClass href="Models/ispem.genmodel#//spem/Default_TaskDefinitionPerformer"/>
+  </objects>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_tC5_APJIEeOKhe67t1mkyw">
+    <genClass href="Models/ispem.genmodel#//spem/Default_ResponsibilityAssignment"/>
+  </objects>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_v9jyQPJIEeOKhe67t1mkyw">
+    <genClass href="Models/ispem.genmodel#//spem/Default_TaskDefinitionParameter"/>
+  </objects>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_jSxaUPJLEeOKhe67t1mkyw">
+    <genClass href="Models/ispem.genmodel#//spem/MethodContentPackage"/>
+  </objects>
+  <objects xsi:type="diagramconfigurator:SimpleObjectConfiguration" xmi:id="_6WlvQPLPEeOKhe67t1mkyw" name="ToolUse"/>
+  <objects xsi:type="diagramconfigurator:SimpleObjectConfiguration" xmi:id="_NxBusPLQEeOKhe67t1mkyw" name="WorkProductManagement"/>
+  <genModel href="Models/ispem.genmodel#/"/>
+  <templateRootObject href="Models/ispem.genmodel#//spem/MethodContentPackage"/>
+  <editorConfigurator href="iSpem.editorconfigurator#_sWrKUbzCEeOiz_iWbv7YrQ"/>
+</diagramconfigurator:DiagramConfiguration>

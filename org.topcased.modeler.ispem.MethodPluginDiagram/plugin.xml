@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension point="org.topcased.modeler.templates">
+      <template
+            di="templates/org.topcased.modeler.ispem.MethodPluginDiagram/%name%.ispemdi"
+            model="templates/org.topcased.modeler.ispem.MethodPluginDiagram/%name%.ispem"
+            name="Method Plugin Diagram"
+            id="org.topcased.modeler.ispem.MethodPluginDiagram.templates.org.topcased.modeler.ispem.MethodPluginDiagram"
+            editorId="org.topcased.modeler.ispem.editor.IspemEditor"/>
+   </extension>
+   
+   <extension point="org.topcased.modeler.diagrams">
+      <diagram
+            configuration="org.topcased.modeler.ispem.MethodPluginDiagram.MethodPluginDiagramConfiguration"
+            id="org.topcased.modeler.ispem.MethodPluginDiagram"
+            name="Method Plugin Diagram">
+         <enableFor
+               class="org.topcased.spem.MethodPlugin">
+         </enableFor>
+      </diagram>
+	</extension>
+	
+	
+	<extension
+       point="org.topcased.modeler.topcasedPreferenceInitializer">
+    <preferenceInitializer
+          class="org.topcased.modeler.ispem.MethodPluginDiagram.preferences.MethodPluginDiagramDiagramTopcasedPreferenceInitializer"
+          editorId="org.topcased.modeler.ispem.editor.IspemEditor"
+          id="org.topcased.modeler.ispem.MethodPluginDiagram.preferences.MethodPluginDiagramTopcasedPreferenceInitializer">
+    </preferenceInitializer>
+ </extension>
+
+	<extension point="org.eclipse.ui.preferencePages">
+		<page
+			id="org.topcased.modeler.ispem.MethodPluginDiagram.preferences.MethodPluginDiagramDiagramPreferencePage"
+			category="org.topcased.modeler.ispem.preferences.IspemPreferencePage"
+			class="org.topcased.modeler.ispem.MethodPluginDiagram.preferences.MethodPluginDiagramDiagramPreferencePage"
+			name="MethodPluginDiagramDiagram"/>
+		<page
+			id="org.topcased.modeler.ispem.MethodPluginDiagram.preferences.MethodContentPackagePreferencePage"
+			category="org.topcased.modeler.ispem.MethodPluginDiagram.preferences.MethodPluginDiagramDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.MethodPluginDiagram.preferences.MethodContentPackagePreferencePage"
+			name="MethodContentPackage"/>
+		<page
+			id="org.topcased.modeler.ispem.MethodPluginDiagram.preferences.ProcessPackagePreferencePage"
+			category="org.topcased.modeler.ispem.MethodPluginDiagram.preferences.MethodPluginDiagramDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.MethodPluginDiagram.preferences.ProcessPackagePreferencePage"
+			name="ProcessPackage"/>
+		<page
+			id="org.topcased.modeler.ispem.MethodPluginDiagram.preferences.MethodPluginPreferencePage"
+			category="org.topcased.modeler.ispem.MethodPluginDiagram.preferences.MethodPluginDiagramDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.MethodPluginDiagram.preferences.MethodPluginPreferencePage"
+			name="MethodPlugin"/>
+	</extension>
+
+	<extension point="org.eclipse.ui.propertyPages">
+		<page
+			id="org.topcased.modeler.ispem.MethodPluginDiagram.preferences.property.MethodPluginDiagramDiagramPreferencePage"
+			category="org.topcased.modeler.ispem.preferences.property.IspemPreferencePage"
+			class="org.topcased.modeler.ispem.MethodPluginDiagram.preferences.MethodPluginDiagramDiagramPreferencePage"
+			name="MethodPluginDiagramDiagram">       
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+		</page>
+		
+		<page
+			id="org.topcased.modeler.ispem.MethodPluginDiagram.preferences.property.MethodContentPackagePreferencePage"
+			category="org.topcased.modeler.ispem.MethodPluginDiagram.preferences.property.MethodPluginDiagramDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.MethodPluginDiagram.preferences.MethodContentPackagePreferencePage"
+			name="MethodContentPackage">
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+		</page>
+    	
+		<page
+			id="org.topcased.modeler.ispem.MethodPluginDiagram.preferences.property.ProcessPackagePreferencePage"
+			category="org.topcased.modeler.ispem.MethodPluginDiagram.preferences.property.MethodPluginDiagramDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.MethodPluginDiagram.preferences.ProcessPackagePreferencePage"
+			name="ProcessPackage">
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+		</page>
+    	
+		<page
+			id="org.topcased.modeler.ispem.MethodPluginDiagram.preferences.property.MethodPluginPreferencePage"
+			category="org.topcased.modeler.ispem.MethodPluginDiagram.preferences.property.MethodPluginDiagramDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.MethodPluginDiagram.preferences.MethodPluginPreferencePage"
+			name="MethodPlugin">
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+		</page>
+    	
+	</extension>
+ <extension
+       point="org.eclipse.ui.popupMenus">
+    <objectContribution
+          id="org.topcased.modeler.ispem.MethodPluginDiagram.contribution1"
+          objectClass="org.topcased.modeler.ispem.MethodPluginDiagram.edit.MethodContentPackageEditPart">
+       <menu
+             id="org.topcased.modeler.ispem.MethodPluginDiagram.menu1"
+             label="Import From Ontology"
+             path="additions">
+          <separator
+                name="group1">
+          </separator>
+       </menu>
+       <action
+             class="org.topcased.modeler.ispem.MethodPluginDiagram.actions.ImportMethodContentFromOntology"
+             enablesFor="1"
+             id="org.topcased.modeler.ispem.MethodPluginDiagram.newAction"
+             label="Import Method Content"
+             menubarPath="org.topcased.modeler.ispem.MethodPluginDiagram.menu1/group1">
+       </action>
+    </objectContribution>
+ </extension>
+
+</plugin>

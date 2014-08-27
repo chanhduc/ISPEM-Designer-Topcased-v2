@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagramconfigurator:DiagramConfiguration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diagramconfigurator="http://www.topcased.org/diagramconfigurator/0.10" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmi:id="_cCdQIfVFEeOQ1_cxfeHmMg" projectName="org.topcased.modeler.ispem.RoleSetDefinition" name="Role Set Definition Diagram" package="org.topcased.modeler.ispem.rolesetdefinition" prefix="RoleSetDefinition">
+  <palette xmi:id="_aOGEoPVHEeOQ1_cxfeHmMg" name="Palettes">
+    <paletteCategories xmi:id="_bm64wPVHEeOQ1_cxfeHmMg" name="Nodes">
+      <items xmi:id="_elzEsPVHEeOQ1_cxfeHmMg" name="Create Role Set" part="_xAWw8PVGEeOQ1_cxfeHmMg"/>
+      <items xmi:id="_mtp8oPVHEeOQ1_cxfeHmMg" name="Select Role Definition" part="_1lTi0PVGEeOQ1_cxfeHmMg"/>
+    </paletteCategories>
+    <paletteCategories xmi:id="_diMSoPVHEeOQ1_cxfeHmMg" name="Links">
+      <items xmi:id="_s0y6APVHEeOQ1_cxfeHmMg" name="Categorize" part="_4p1DwPVGEeOQ1_cxfeHmMg"/>
+    </paletteCategories>
+  </palette>
+  <parts xsi:type="diagramconfigurator:NodePartConfiguration" xmi:id="_xAWw8PVGEeOQ1_cxfeHmMg" object="_ZnaUkPVGEeOQ1_cxfeHmMg" type="Graphic With Bottom Label"/>
+  <parts xsi:type="diagramconfigurator:NodePartConfiguration" xmi:id="_1lTi0PVGEeOQ1_cxfeHmMg" object="_uGoKwPVGEeOQ1_cxfeHmMg" type="Graphic With Bottom Label"/>
+  <parts xsi:type="diagramconfigurator:EdgePartConfiguration" xmi:id="_4p1DwPVGEeOQ1_cxfeHmMg" object="_6CrGAPVGEeOQ1_cxfeHmMg" defaultForegroundColor="255,128,64" lineWidth="2" sourceDecoration="DIAMOND">
+    <sourceTargetCouple xmi:id="_EStycPVHEeOQ1_cxfeHmMg" sourceNode="_xAWw8PVGEeOQ1_cxfeHmMg" targetNode="_1lTi0PVGEeOQ1_cxfeHmMg">
+      <refSourceToTarget xsi:type="ecore:EReference" href="Models/spem2.ecore#//uma/RoleSet/role"/>
+    </sourceTargetCouple>
+    <edgeObjects xmi:id="_SnHFIPVHEeOQ1_cxfeHmMg" id="categorize" type="Middle"/>
+  </parts>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_ZnaUkPVGEeOQ1_cxfeHmMg">
+    <genClass href="Models/ispem.genmodel#//spem/uma/RoleSet"/>
+  </objects>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_pcZ3UPVGEeOQ1_cxfeHmMg">
+    <genClass href="Models/ispem.genmodel#//spem/uma/RoleSetPackage"/>
+    <diagrams xmi:id="_q8DsMPVGEeOQ1_cxfeHmMg" diagram="_cCdQIfVFEeOQ1_cxfeHmMg"/>
+  </objects>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_uGoKwPVGEeOQ1_cxfeHmMg">
+    <genClass href="Models/ispem.genmodel#//spem/RoleDefinition"/>
+  </objects>
+  <objects xsi:type="diagramconfigurator:SimpleObjectConfiguration" xmi:id="_6CrGAPVGEeOQ1_cxfeHmMg" name="CategorizeRoleDefinition"/>
+  <genModel href="Models/ispem.genmodel#/"/>
+  <templateRootObject href="Models/ispem.genmodel#//spem/uma/RoleSetPackage"/>
+  <editorConfigurator href="iSpem.editorconfigurator#_sWrKUbzCEeOiz_iWbv7YrQ"/>
+</diagramconfigurator:DiagramConfiguration>

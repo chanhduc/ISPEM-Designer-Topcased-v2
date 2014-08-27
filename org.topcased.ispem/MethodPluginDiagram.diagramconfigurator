@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagramconfigurator:DiagramConfiguration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diagramconfigurator="http://www.topcased.org/diagramconfigurator/0.10" xmi:id="_7KCP0efWEeO7o8nd0p2V_Q" projectName="org.topcased.modeler.ispem.MethodPluginDiagram" name="Method Plugin Diagram" package="org.topcased.modeler.ispem.MethodPluginDiagram" prefix="MethodPluginDiagram">
+  <palette xmi:id="_b8s_MOfYEeO7o8nd0p2V_Q" name="Palette">
+    <paletteCategories xmi:id="_l-FkkOfYEeO7o8nd0p2V_Q" name="Nodes">
+      <items xmi:id="_m7GmcOfYEeO7o8nd0p2V_Q" name="Create Method Content Package" part="_AnGgAOfYEeO7o8nd0p2V_Q"/>
+      <items xmi:id="_qPBOQOfYEeO7o8nd0p2V_Q" name="Create Process Package" part="_HYVjQOfYEeO7o8nd0p2V_Q"/>
+    </paletteCategories>
+  </palette>
+  <parts xsi:type="diagramconfigurator:NodePartConfiguration" xmi:id="_AnGgAOfYEeO7o8nd0p2V_Q" object="_QO0RMOfXEeO7o8nd0p2V_Q" type="Package"/>
+  <parts xsi:type="diagramconfigurator:NodePartConfiguration" xmi:id="_HYVjQOfYEeO7o8nd0p2V_Q" object="_-i_TMOfXEeO7o8nd0p2V_Q" type="Package"/>
+  <parts xsi:type="diagramconfigurator:NodePartConfiguration" xmi:id="_Z9rtwOfYEeO7o8nd0p2V_Q" object="_C40D8OfYEeO7o8nd0p2V_Q"/>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_QO0RMOfXEeO7o8nd0p2V_Q">
+    <genClass href="Models/ispem.genmodel#//spem/MethodContentPackage"/>
+  </objects>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_-i_TMOfXEeO7o8nd0p2V_Q">
+    <genClass href="Models/ispem.genmodel#//spem/ProcessPackage"/>
+  </objects>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_C40D8OfYEeO7o8nd0p2V_Q">
+    <genClass href="Models/ispem.genmodel#//spem/MethodPlugin"/>
+    <diagrams xmi:id="_wAHQ4OfdEeO7o8nd0p2V_Q" diagram="_7KCP0efWEeO7o8nd0p2V_Q"/>
+  </objects>
+  <genModel href="Models/ispem.genmodel#/"/>
+  <templateRootObject href="Models/ispem.genmodel#//spem/MethodPlugin"/>
+  <editorConfigurator href="iSpem.editorconfigurator#_sWrKUbzCEeOiz_iWbv7YrQ"/>
+</diagramconfigurator:DiagramConfiguration>

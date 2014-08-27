@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension point="org.topcased.modeler.templates">
+      <template
+            di="templates/org.topcased.modeler.ispem.ProcessWFDiagram/%name%.ispemdi"
+            model="templates/org.topcased.modeler.ispem.ProcessWFDiagram/%name%.ispem"
+            name="ProcessWorkflowDiagram"
+            id="org.topcased.modeler.ispem.ProcessWFDiagram.templates.org.topcased.modeler.ispem.ProcessWFDiagram"
+            editorId="org.topcased.modeler.ispem.editor.IspemEditor"/>
+   </extension>
+   
+   <extension point="org.topcased.modeler.diagrams">
+      <diagram
+            configuration="org.topcased.modeler.ispem.ProcessWFDiagram.ProcessWFDiagramConfiguration"
+            id="org.topcased.modeler.ispem.ProcessWFDiagram"
+            name="ProcessWorkflowDiagram">
+         <enableFor class="org.topcased.ispem.Process"/>
+      </diagram>
+	</extension>
+	
+	
+	<extension
+       point="org.topcased.modeler.topcasedPreferenceInitializer">
+    <preferenceInitializer
+          class="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.ProcessWFDiagramDiagramTopcasedPreferenceInitializer"
+          editorId="org.topcased.modeler.ispem.editor.IspemEditor"
+          id="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.ProcessWFDiagramTopcasedPreferenceInitializer">
+    </preferenceInitializer>
+ </extension>
+
+	<extension point="org.eclipse.ui.preferencePages">
+		<page
+			id="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.ProcessWFDiagramDiagramPreferencePage"
+			category="org.topcased.modeler.ispem.preferences.IspemPreferencePage"
+			class="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.ProcessWFDiagramDiagramPreferencePage"
+			name="ProcessWFDiagramDiagram"/>
+		<page
+			id="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.ActivityPreferencePage"
+			category="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.ProcessWFDiagramDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.ActivityPreferencePage"
+			name="Activity"/>
+		<page
+			id="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.WorkSequencePreferencePage"
+			category="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.ProcessWFDiagramDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.WorkSequencePreferencePage"
+			name="WorkSequence"/>
+		<page
+			id="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.ArtifactPreferencePage"
+			category="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.ProcessWFDiagramDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.ArtifactPreferencePage"
+			name="Artifact"/>
+		<page
+			id="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.StartNodePreferencePage"
+			category="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.ProcessWFDiagramDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.StartNodePreferencePage"
+			name="StartNode"/>
+		<page
+			id="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.EndNodePreferencePage"
+			category="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.ProcessWFDiagramDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.EndNodePreferencePage"
+			name="EndNode"/>
+		<page
+			id="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.ForkNodePreferencePage"
+			category="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.ProcessWFDiagramDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.ForkNodePreferencePage"
+			name="ForkNode"/>
+		<page
+			id="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.JoinNodePreferencePage"
+			category="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.ProcessWFDiagramDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.JoinNodePreferencePage"
+			name="JoinNode"/>
+		<page
+			id="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.DecisionNodePreferencePage"
+			category="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.ProcessWFDiagramDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.DecisionNodePreferencePage"
+			name="DecisionNode"/>
+		<page
+			id="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.ProcessParameterInPreferencePage"
+			category="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.ProcessWFDiagramDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.ProcessParameterInPreferencePage"
+			name="ProcessParameterIn"/>
+		<page
+			id="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.ProcessParameterOutPreferencePage"
+			category="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.ProcessWFDiagramDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.ProcessParameterOutPreferencePage"
+			name="ProcessParameterOut"/>
+		<page
+			id="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.ProcessParameterInOutPreferencePage"
+			category="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.ProcessWFDiagramDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.ProcessParameterInOutPreferencePage"
+			name="ProcessParameterInOut"/>
+	</extension>
+
+	<extension point="org.eclipse.ui.propertyPages">
+		<page
+			id="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.property.ProcessWFDiagramDiagramPreferencePage"
+			category="org.topcased.modeler.ispem.preferences.property.IspemPreferencePage"
+			class="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.ProcessWFDiagramDiagramPreferencePage"
+			name="ProcessWFDiagramDiagram">       
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+		</page>
+		
+		<page
+			id="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.property.ActivityPreferencePage"
+			category="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.property.ProcessWFDiagramDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.ActivityPreferencePage"
+			name="Activity">
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+		</page>
+    	
+		<page
+			id="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.property.WorkSequencePreferencePage"
+			category="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.property.ProcessWFDiagramDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.WorkSequencePreferencePage"
+			name="WorkSequence">
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+		</page>
+    	
+		<page
+			id="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.property.ArtifactPreferencePage"
+			category="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.property.ProcessWFDiagramDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.ArtifactPreferencePage"
+			name="Artifact">
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+		</page>
+    	
+		<page
+			id="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.property.StartNodePreferencePage"
+			category="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.property.ProcessWFDiagramDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.StartNodePreferencePage"
+			name="StartNode">
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+		</page>
+    	
+		<page
+			id="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.property.EndNodePreferencePage"
+			category="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.property.ProcessWFDiagramDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.EndNodePreferencePage"
+			name="EndNode">
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+		</page>
+    	
+		<page
+			id="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.property.ForkNodePreferencePage"
+			category="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.property.ProcessWFDiagramDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.ForkNodePreferencePage"
+			name="ForkNode">
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+		</page>
+    	
+		<page
+			id="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.property.JoinNodePreferencePage"
+			category="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.property.ProcessWFDiagramDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.JoinNodePreferencePage"
+			name="JoinNode">
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+		</page>
+    	
+		<page
+			id="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.property.DecisionNodePreferencePage"
+			category="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.property.ProcessWFDiagramDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.DecisionNodePreferencePage"
+			name="DecisionNode">
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+		</page>
+    	
+		<page
+			id="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.property.ProcessParameterInPreferencePage"
+			category="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.property.ProcessWFDiagramDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.ProcessParameterInPreferencePage"
+			name="ProcessParameterIn">
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+		</page>
+    	
+		<page
+			id="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.property.ProcessParameterOutPreferencePage"
+			category="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.property.ProcessWFDiagramDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.ProcessParameterOutPreferencePage"
+			name="ProcessParameterOut">
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+		</page>
+    	
+		<page
+			id="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.property.ProcessParameterInOutPreferencePage"
+			category="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.property.ProcessWFDiagramDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.ProcessWFDiagram.preferences.ProcessParameterInOutPreferencePage"
+			name="ProcessParameterInOut">
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+		</page>
+    	
+	</extension>
+
+
+</plugin>

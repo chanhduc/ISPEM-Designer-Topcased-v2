@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            class="org.topcased.modeler.ispem.editor.IspemEditor"
+            icon="icons/Ispem.gif"
+            default="true"
+            name="iSpem editor"
+            id="org.topcased.modeler.ispem.editor.IspemEditor"
+            contributorClass="org.topcased.modeler.ispem.actions.IspemEditorActionBarContributor"
+            extensions="ispemdi">
+      </editor>
+   </extension>
+   
+   <extension point="org.eclipse.ui.newWizards">
+      <wizard
+            icon="icons/Ispem.gif"
+            class="org.topcased.modeler.ispem.wizards.NewIspemDiagrams"
+            category="org.topcased.facilities.newWizards/org.topcased.modeler.newdiagram"
+            name="Ispem Diagram"
+            id="org.topcased.modeler.ispem.wizards.NewIspemDiagrams">
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+   
+   <extension point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension targetID="org.topcased.modeler.perspective">
+         <newWizardShortcut id="org.topcased.modeler.ispem.wizards.NewIspemDiagrams"/>
+      </perspectiveExtension>
+   </extension>
+   
+   <extension point="org.eclipse.ui.preferencePages">
+      <page
+            category="org.topcased.modeler.preferences.ModelerPreferencePage"
+            class="org.topcased.modeler.ispem.preferences.IspemPreferencePage"
+            id="org.topcased.modeler.ispem.preferences.IspemPreferencePage"
+            name="Ispem"/>
+   </extension>
+   
+	<extension point="org.eclipse.ui.propertyPages">
+		<page
+			id="org.topcased.modeler.ispem.preferences.property.IspemPreferencePage"
+			class="org.topcased.modeler.ispem.preferences.IspemPreferencePage"
+			category="org.topcased.modeler.preferences.property.ModelerPreferencePage"
+			name="Ispem">
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+		</page>
+	</extension>
+   
+   	<extension point="org.eclipse.core.runtime.preferences">
+		<initializer class="org.topcased.modeler.ispem.preferences.AllDiagramPreferenceInitializer"/>
+	</extension>
+    <extension
+          point="org.topcased.modeler.templates">
+       <template
+             di="templates/common/%name%.ispemdi"
+             editorId="org.topcased.modeler.ispem.editor.IspemEditor"
+             id="org.topcased.modeler.ispem.templates.Common"
+             isDiagram="false"
+             model="templates/common/%name%.ispem"
+             name="Common">
+       </template>
+       <template
+             di="templates/base_plugin/%name%.ispemdi"
+             editorId="org.topcased.modeler.ispem.editor.IspemEditor"
+             id="org.topcased.modeler.ispem.templates.BasePlugin"
+             isDiagram="false"
+             model="templates/base_plugin/%name%.ispem"
+             name="Spem base plugin">
+       </template>
+    </extension>
+	
+</plugin>

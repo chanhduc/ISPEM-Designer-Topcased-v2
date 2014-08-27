@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagramconfigurator:DiagramConfiguration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diagramconfigurator="http://www.topcased.org/diagramconfigurator/0.10" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmi:id="_jvJ5cMcLEeOkFebLjfx5SQ" projectName="org.topcased.modeler.ispem.activityWF" name="Activity Workflow" package="org.topcased.modeler.ispem.activityWF" prefix="ActivityWF">
+  <palette xmi:id="_Zz0h0MdEEeO5Rf5NqdHTYw" name="Palette">
+    <paletteCategories xmi:id="_nFXQYMdEEeO5Rf5NqdHTYw" name="Node">
+      <items xmi:id="_uwwOwMdEEeO5Rf5NqdHTYw" name="Create Task Use" part="_eh3-oMc_EeO5Rf5NqdHTYw"/>
+      <items xmi:id="_3IEfAMdEEeO5Rf5NqdHTYw" name="Create Role Use" part="_KLNLAMdAEeO5Rf5NqdHTYw"/>
+      <items xmi:id="_7TSiQMdEEeO5Rf5NqdHTYw" name="Create Artifact" part="_GFbBYMdAEeO5Rf5NqdHTYw"/>
+      <items xmi:id="_5c_VMc1pEeOd2cd42jCqqw" name="Start Node" part="_K5Q9wMvIEeO7gZyge6ePKw"/>
+      <items xmi:id="_8rzakM1pEeOd2cd42jCqqw" name="End Node" part="_Sf27sMvIEeO7gZyge6ePKw"/>
+      <items xmi:id="_-xqT0M1pEeOd2cd42jCqqw" name="Fork Node" part="_S0B04MvIEeO7gZyge6ePKw"/>
+      <items xmi:id="_COoJ8M1qEeOd2cd42jCqqw" name="Join Node" part="_VY920MvIEeO7gZyge6ePKw"/>
+      <items xmi:id="_DvI6cM1qEeOd2cd42jCqqw" name="Desion Node" part="_WVM1kMvIEeO7gZyge6ePKw"/>
+    </paletteCategories>
+    <paletteCategories xmi:id="__HpksMdEEeO5Rf5NqdHTYw" name="ProcessParameter">
+      <items xmi:id="_A7fg4MdFEeO5Rf5NqdHTYw" name="Artifact In" part="_pYAEgNRBEeOJgrND0ItdrQ"/>
+      <items xmi:id="_TYFYAMdFEeO5Rf5NqdHTYw" name="Artifact Out" part="_JQpf4MdDEeO5Rf5NqdHTYw"/>
+      <items xmi:id="_8Chl4NUxEeOhGNfhwx89MA" name="Artifact InOut" part="_lgLaUNUxEeOhGNfhwx89MA"/>
+    </paletteCategories>
+    <paletteCategories xmi:id="_lkznIMdFEeO5Rf5NqdHTYw" name="ProcessPerformer">
+      <items xmi:id="_qkZGkMdFEeO5Rf5NqdHTYw" name="Realize Task" part="_zdkYoMdDEeO5Rf5NqdHTYw"/>
+    </paletteCategories>
+    <paletteCategories xmi:id="_GmuyoM1qEeOd2cd42jCqqw" name="Edge">
+      <items xmi:id="_JkPsoM1qEeOd2cd42jCqqw" name="Edge" part="_0mHH8MvLEeO7gZyge6ePKw"/>
+    </paletteCategories>
+  </palette>
+  <parts xsi:type="diagramconfigurator:NodePartConfiguration" xmi:id="_eh3-oMc_EeO5Rf5NqdHTYw" object="_7HR2cMcLEeOkFebLjfx5SQ" type="Graphic With Bottom Label" superType="_kGq9QM18EeOd2cd42jCqqw"/>
+  <parts xsi:type="diagramconfigurator:NodePartConfiguration" xmi:id="_GFbBYMdAEeO5Rf5NqdHTYw" object="_f6E_cOzVEeOqJe33hIQmwg" type="Graphic With Bottom Label"/>
+  <parts xsi:type="diagramconfigurator:NodePartConfiguration" xmi:id="_KLNLAMdAEeO5Rf5NqdHTYw" object="_G11IQMcMEeOkFebLjfx5SQ" type="Graphic With Bottom Label"/>
+  <parts xsi:type="diagramconfigurator:EdgePartConfiguration" xmi:id="_JQpf4MdDEeO5Rf5NqdHTYw" object="_Ng9l4MdAEeO5Rf5NqdHTYw" presentation="artifactOut" lineWidth="2" prefix="ProcessParameterOut" targetDecoration="ARROW">
+    <constraint xmi:id="_wZ5MMNQ8EeOJgrND0ItdrQ" language="ocl" rule="self.direction = ParameterDirectionKind::out"/>
+    <sourceTargetCouple xmi:id="_y5RYwMdDEeO5Rf5NqdHTYw" containerType="SOURCE" sourceNode="_eh3-oMc_EeO5Rf5NqdHTYw" targetNode="_GFbBYMdAEeO5Rf5NqdHTYw">
+      <containerObject href="Models/ispem.genmodel#//spem/TaskUse"/>
+      <containerRef xsi:type="ecore:EReference" href="Models/spem2.ecore#//TaskUse/ownedProcessParameter"/>
+      <refSourceToEdge xsi:type="ecore:EReference" href="Models/spem2.ecore#//TaskUse/ownedProcessParameter"/>
+      <refEdgeToTarget xsi:type="ecore:EReference" href="Models/spem2.ecore#//ProcessParameter/parameterType"/>
+    </sourceTargetCouple>
+    <edgeObjects xmi:id="_9kv14MllEeO5Rf5NqdHTYw" id="direction" type="Target">
+      <eStructuralFeature xsi:type="ecore:EAttribute" href="Models/spem2.ecore#//WorkDefinitionParameter/direction"/>
+    </edgeObjects>
+  </parts>
+  <parts xsi:type="diagramconfigurator:EdgePartConfiguration" xmi:id="_pYAEgNRBEeOJgrND0ItdrQ" object="_Ng9l4MdAEeO5Rf5NqdHTYw" presentation="artifactIn" prefix="ProcessParameterIn" sourceDecoration="ARROW">
+    <constraint xmi:id="_4i2eENRBEeOJgrND0ItdrQ" language="ocl" rule="self.direction = ParameterDirectionKind::_in"/>
+    <sourceTargetCouple xmi:id="_09F4UNRBEeOJgrND0ItdrQ" containerType="SOURCE" sourceNode="_eh3-oMc_EeO5Rf5NqdHTYw" targetNode="_GFbBYMdAEeO5Rf5NqdHTYw">
+      <containerObject href="Models/ispem.genmodel#//spem/TaskUse"/>
+      <containerRef xsi:type="ecore:EReference" href="Models/spem2.ecore#//TaskUse/ownedProcessParameter"/>
+      <refSourceToEdge xsi:type="ecore:EReference" href="Models/spem2.ecore#//TaskUse/ownedProcessParameter"/>
+      <refEdgeToTarget xsi:type="ecore:EReference" href="Models/spem2.ecore#//ProcessParameter/parameterType"/>
+    </sourceTargetCouple>
+  </parts>
+  <parts xsi:type="diagramconfigurator:EdgePartConfiguration" xmi:id="_lgLaUNUxEeOhGNfhwx89MA" object="_Ng9l4MdAEeO5Rf5NqdHTYw" presentation="artifactInOut" prefix="ProcessParameterInOut" sourceDecoration="ARROW" targetDecoration="ARROW">
+    <constraint xmi:id="_tJHhoNUxEeOhGNfhwx89MA" language="ocl" rule="self.direction = ParameterDirectionKind::inout"/>
+    <sourceTargetCouple xmi:id="_soVIwNUxEeOhGNfhwx89MA" containerType="SOURCE" sourceNode="_eh3-oMc_EeO5Rf5NqdHTYw" targetNode="_GFbBYMdAEeO5Rf5NqdHTYw">
+      <containerObject href="Models/ispem.genmodel#//spem/TaskUse"/>
+      <containerRef xsi:type="ecore:EReference" href="Models/spem2.ecore#//TaskUse/ownedProcessParameter"/>
+      <refSourceToEdge xsi:type="ecore:EReference" href="Models/spem2.ecore#//TaskUse/ownedProcessParameter"/>
+      <refEdgeToTarget xsi:type="ecore:EReference" href="Models/spem2.ecore#//ProcessParameter/parameterType"/>
+    </sourceTargetCouple>
+  </parts>
+  <parts xsi:type="diagramconfigurator:EdgePartConfiguration" xmi:id="_zdkYoMdDEeO5Rf5NqdHTYw" object="_D4ZBwMdDEeO5Rf5NqdHTYw" defaultForegroundColor="255,128,0" lineWidth="2">
+    <sourceTargetCouple xmi:id="_fgNVgMdHEeO5Rf5NqdHTYw" containerType="DIAGRAM" sourceNode="_KLNLAMdAEeO5Rf5NqdHTYw" targetNode="_eh3-oMc_EeO5Rf5NqdHTYw">
+      <containerObject href="Models/ispem.genmodel#//ispem/Activity"/>
+      <containerRef xsi:type="ecore:EReference" href="Models/spem2.ecore#//Activity/nestedBreakdownElement"/>
+      <refEdgeToSource xsi:type="ecore:EReference" href="Models/spem2.ecore#//ProcessPerformer/linkedRoleUse"/>
+      <refEdgeToTarget xsi:type="ecore:EReference" href="Models/spem2.ecore#//ProcessPerformer/linkedTaskUse"/>
+    </sourceTargetCouple>
+  </parts>
+  <parts xsi:type="diagramconfigurator:NodePartConfiguration" xmi:id="_K5Q9wMvIEeO7gZyge6ePKw" object="_yT6YocvHEeO7gZyge6ePKw" type="ImageFigure" superType="_MBQjwMvMEeO7gZyge6ePKw"/>
+  <parts xsi:type="diagramconfigurator:NodePartConfiguration" xmi:id="_Sf27sMvIEeO7gZyge6ePKw" object="_20uRYMvHEeO7gZyge6ePKw" type="ImageFigure" superType="_MBQjwMvMEeO7gZyge6ePKw"/>
+  <parts xsi:type="diagramconfigurator:NodePartConfiguration" xmi:id="_S0B04MvIEeO7gZyge6ePKw" object="_4LqPIMvHEeO7gZyge6ePKw" type="RectangleFigure" superType="_MBQjwMvMEeO7gZyge6ePKw" defaultBackgroundColor="0,0,0" defaultWidth="100" defaultHeight="5" minimumWidth="50" minimumHeight="5" maximumWidth="100" maximumHeight="10"/>
+  <parts xsi:type="diagramconfigurator:NodePartConfiguration" xmi:id="_VY920MvIEeO7gZyge6ePKw" object="_6ReFEMvHEeO7gZyge6ePKw" type="ImageFigure" superType="_MBQjwMvMEeO7gZyge6ePKw" defaultBackgroundColor="0,0,0" defaultWidth="100" defaultHeight="5" minimumWidth="50" minimumHeight="5" maximumWidth="100" maximumHeight="10"/>
+  <parts xsi:type="diagramconfigurator:NodePartConfiguration" xmi:id="_WVM1kMvIEeO7gZyge6ePKw" object="_7yfL4MvHEeO7gZyge6ePKw" type="Graphic With Bottom Label" superType="_MBQjwMvMEeO7gZyge6ePKw"/>
+  <parts xsi:type="diagramconfigurator:EdgePartConfiguration" xmi:id="_0mHH8MvLEeO7gZyge6ePKw" object="_1M-ToMvLEeO7gZyge6ePKw">
+    <sourceTargetCouple xmi:id="_KZqXEM19EeOd2cd42jCqqw" containerType="DIAGRAM" sourceNode="_kGq9QM18EeOd2cd42jCqqw" targetNode="_kGq9QM18EeOd2cd42jCqqw">
+      <containerObject href="Models/ispem.genmodel#//ispem/Activity"/>
+      <containerRef xsi:type="ecore:EReference" href="Models/spem2.ecore#//Activity/nestedBreakdownElement"/>
+      <refEdgeToSource xsi:type="ecore:EReference" href="Models/spem2.ecore#//activity/Edge/source"/>
+      <refEdgeToTarget xsi:type="ecore:EReference" href="Models/spem2.ecore#//activity/Edge/source"/>
+    </sourceTargetCouple>
+  </parts>
+  <parts xsi:type="diagramconfigurator:NodePartConfiguration" xmi:id="_MBQjwMvMEeO7gZyge6ePKw" object="_h5jCgMvIEeO7gZyge6ePKw" type="ImageFigure" superType="_kGq9QM18EeOd2cd42jCqqw"/>
+  <parts xsi:type="diagramconfigurator:NodePartConfiguration" xmi:id="_kGq9QM18EeOd2cd42jCqqw" object="__NU28M17EeOd2cd42jCqqw" type="Graphic With Bottom Label"/>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_5lSfQMcLEeOkFebLjfx5SQ">
+    <genClass href="Models/ispem.genmodel#//ispem/Activity"/>
+    <diagrams xmi:id="_EyylwMdJEeO5Rf5NqdHTYw" diagram="_jvJ5cMcLEeOkFebLjfx5SQ"/>
+  </objects>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_7HR2cMcLEeOkFebLjfx5SQ">
+    <genClass href="Models/ispem.genmodel#//spem/TaskUse"/>
+  </objects>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_DCKCUMcMEeOkFebLjfx5SQ">
+    <genClass href="Models/ispem.genmodel#//ispem/Artifact"/>
+  </objects>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_G11IQMcMEeOkFebLjfx5SQ">
+    <genClass href="Models/ispem.genmodel#//spem/RoleUse"/>
+  </objects>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_Ng9l4MdAEeO5Rf5NqdHTYw">
+    <genClass href="Models/ispem.genmodel#//spem/ProcessParameter"/>
+  </objects>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_D4ZBwMdDEeO5Rf5NqdHTYw">
+    <genClass href="Models/ispem.genmodel#//spem/ProcessPerformer"/>
+  </objects>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_yT6YocvHEeO7gZyge6ePKw">
+    <genClass href="Models/ispem.genmodel#//spem/activity/StartNode"/>
+  </objects>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_20uRYMvHEeO7gZyge6ePKw">
+    <genClass href="Models/ispem.genmodel#//spem/activity/EndNode"/>
+  </objects>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_4LqPIMvHEeO7gZyge6ePKw">
+    <genClass href="Models/ispem.genmodel#//spem/activity/ForkNode"/>
+  </objects>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_6ReFEMvHEeO7gZyge6ePKw">
+    <genClass href="Models/ispem.genmodel#//spem/activity/JoinNode"/>
+  </objects>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_7yfL4MvHEeO7gZyge6ePKw">
+    <genClass href="Models/ispem.genmodel#//spem/activity/DecisionNode"/>
+  </objects>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_h5jCgMvIEeO7gZyge6ePKw">
+    <genClass href="Models/ispem.genmodel#//spem/activity/Node"/>
+  </objects>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_1M-ToMvLEeO7gZyge6ePKw">
+    <genClass href="Models/ispem.genmodel#//spem/activity/Edge"/>
+  </objects>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="__NU28M17EeOd2cd42jCqqw">
+    <genClass href="Models/ispem.genmodel#//spem/BreakdownElement"/>
+  </objects>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_f6E_cOzVEeOqJe33hIQmwg">
+    <genClass href="Models/ispem.genmodel#//spem/WorkProductUse"/>
+  </objects>
+  <genModel href="Models/ispem.genmodel#/"/>
+  <templateRootObject href="Models/ispem.genmodel#//ispem/Activity"/>
+  <editorConfigurator href="iSpem.editorconfigurator#_sWrKUbzCEeOiz_iWbv7YrQ"/>
+</diagramconfigurator:DiagramConfiguration>

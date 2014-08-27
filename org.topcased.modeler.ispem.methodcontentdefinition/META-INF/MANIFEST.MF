@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Method Content Definition Diagram
+Bundle-SymbolicName: org.topcased.modeler.ispem.methodcontentdefinition; singleton:=true
+Bundle-Version: 3.0.1.201305291311
+Bundle-Activator: org.topcased.modeler.ispem.methodcontentdefinition.MethodContentDefinitionPlugin
+Bundle-Vendor: Topcased
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore.edit,
+ org.eclipse.ui.ide,
+ org.eclipse.emf.edit.ui,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.ecore.xmi,
+ org.eclipse.emf.edit,
+ org.topcased.ispem,
+ org.topcased.ispem.edit,
+ org.eclipse.core.resources,
+ org.eclipse.emf.ecore.edit,
+ org.topcased.modeler,
+ org.topcased.modeler.ispem
+Eclipse-LazyStart: true

@@ -1,0 +1,7 @@
+<repository>
+<config>
+<server>http://http://ontology-ispem.rhcloud.com/openrdf-sesame</server>
+<repositoryID>ifestOWL</repositoryID>
+<context>http://www.ifest.org</context>
+</config>
+</repository>

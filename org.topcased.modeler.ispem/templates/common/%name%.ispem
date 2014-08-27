@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ispem:ISPEMMethodLibrary xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:activity="http://www.thalesgroup.com/spem/2.0/activity" xmlns:ispem="http://www.topcased.org/ispem" xmlns:spem="http://www.thalesgroup.com/spem/2.0" xmlns:uma="http://www.thalesgroup.com/spem/2.0/uma">
+  <ownedMethodPlugin name="%name%.ispem">
+    <ownedMethodContentPackage  name="Method Content">
+      <ownedMethodContentMember xsi:type="uma:CategoryPackage" name="Standard Categories">
+        <ownedMethodContentMember xsi:type="uma:DisciplinePackage" name="Disciplines"/>
+        <ownedMethodContentMember xsi:type="uma:DomainPackage" name="Domains"/>
+        <ownedMethodContentMember xsi:type="uma:WorkProductKindPackage" name="Work Product Kinds"/>
+        <ownedMethodContentMember xsi:type="uma:QualificationPackage" name="Qualifications"/>
+        <ownedMethodContentMember xsi:type="uma:RoleSetPackage" name="Role Sets"/>
+        <ownedMethodContentMember xsi:type="uma:ToolDefinitionPackage" name="Tools"/>
+        <ownedMethodContentMember xsi:type="ispem:RepresentLanguagePackage" name="Representation Language"/>
+        <ownedMethodContentMember xsi:type="ispem:EngineeringDomainPackage"/>
+        <ownedMethodContentMember xsi:type="ispem:DevelopmentMethodPackage"/>
+      </ownedMethodContentMember>
+      <ownedMethodContentMember xsi:type="uma:CategoryPackage" name="Custom Categories"/>
+      <ownedMethodContentMember xsi:type="ispem:MetaModelPackage"/>
+    </ownedMethodContentPackage>
+    <ownedProcessPackage name="Processes">
+      <ownedProcessMember xsi:type="uma:CapabilityPatternPackage" name="Capability Patterns"/>
+      
+      <ownedProcessMember xsi:type="uma:ProcessComponentPackage" name="Process Components"/>
+      <ownedProcessMember xsi:type="uma:DeliveryProcessPackage" name="Delivery Processes"/>
+    </ownedProcessPackage>
+  </ownedMethodPlugin>
+  <configurationPackage xsi:type="uma:ConfigurationPackage" name="Configurations"/>
+</spem:MethodLibrary>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.topcased.ispem.presentation.IspemModelWizardID"
+            name="%_UI_IspemModelWizard_label"
+            class="org.topcased.ispem.presentation.IspemModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/IspemModelFile.gif">
+         <description>%_UI_IspemModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="org.topcased.ispem.presentation.IspemEditorID"
+            name="%_UI_IspemEditor_label"
+            icon="icons/full/obj16/IspemModelFile.gif"
+            extensions="ispem"
+            class="org.topcased.ispem.presentation.IspemEditor"
+            contributorClass="org.topcased.ispem.presentation.IspemActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.topcased.spem.presentation.SpemModelWizardID"
+            name="%_UI_SpemModelWizard_label"
+            class="org.topcased.spem.presentation.SpemModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/SpemModelFile.gif">
+         <description>%_UI_SpemModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="org.topcased.spem.presentation.SpemEditorID"
+            name="%_UI_SpemEditor_label"
+            icon="icons/full/obj16/SpemModelFile.gif"
+            extensions="spem"
+            class="org.topcased.spem.presentation.SpemEditor"
+            contributorClass="org.topcased.spem.presentation.SpemActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.topcased.spem.uma.presentation.UmaModelWizardID"
+            name="%_UI_UmaModelWizard_label"
+            class="org.topcased.spem.uma.presentation.UmaModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/UmaModelFile.gif">
+         <description>%_UI_UmaModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="org.topcased.spem.uma.presentation.UmaEditorID"
+            name="%_UI_UmaEditor_label"
+            icon="icons/full/obj16/UmaModelFile.gif"
+            extensions="uma"
+            class="org.topcased.spem.uma.presentation.UmaEditor"
+            contributorClass="org.topcased.spem.uma.presentation.UmaActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.topcased.spem.activity.presentation.ActivityModelWizardID"
+            name="%_UI_ActivityModelWizard_label"
+            class="org.topcased.spem.activity.presentation.ActivityModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ActivityModelFile.gif">
+         <description>%_UI_ActivityModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="org.topcased.spem.activity.presentation.ActivityEditorID"
+            name="%_UI_ActivityEditor_label"
+            icon="icons/full/obj16/ActivityModelFile.gif"
+            extensions="activity"
+            class="org.topcased.spem.activity.presentation.ActivityEditor"
+            contributorClass="org.topcased.spem.activity.presentation.ActivityActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

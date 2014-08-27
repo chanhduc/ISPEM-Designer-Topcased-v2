@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertiesconfigurator:TabbedView xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:propertiesconfigurator="http://www.topcased.org/PropertiesViewConfiguration/1.0" projectName="org.topcased.modeler.ispem.tabbedproperties" id="org.topcased.modeler.ispem.TabbedProperties" name="ISPEM Tabbed Properties" basePackage="org.topcased.modeler.ispem.tabbedproperties">
+  <categories name="ISPEM">
+    <tabs label="Method Content Use">
+      <sections xsi:type="propertiesconfigurator:SingleFeatureSection" label="Task Definition">
+        <feature href="Models/ispem.genmodel#//spem/TaskUse/task"/>
+      </sections>
+      <sections xsi:type="propertiesconfigurator:SingleFeatureSection" afterSection="//@categories.0/@tabs.0/@sections.0" label="Role Definition">
+        <feature href="Models/ispem.genmodel#//spem/RoleUse/role"/>
+      </sections>
+    </tabs>
+  </categories>
+  <genModel href="Models/ispem.genmodel#/"/>
+</propertiesconfigurator:TabbedView>

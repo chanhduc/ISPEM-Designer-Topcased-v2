@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagramconfigurator:DiagramConfiguration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:diagramconfigurator="http://www.topcased.org/diagramconfigurator/0.10" xmi:id="_xg1IsOSbEeOgu8kAXSMCzQ" projectName="org.topcased.modeler.ispem.testdiagram" name="Test diagram" package="org.topcased.modeler.ispem.testdiagram" prefix="TestDiagram">
+  <palette xmi:id="_caBmsOSeEeOgu8kAXSMCzQ" name="Palette">
+    <paletteCategories xmi:id="_h2a98OSeEeOgu8kAXSMCzQ" name="Node">
+      <items xmi:id="_m2b7MOSeEeOgu8kAXSMCzQ" name="Task Definition" part="_c_AjEOSeEeOgu8kAXSMCzQ"/>
+      <items xmi:id="_0emnwOSjEeOcDqFs2S97Dg" name="Role Definition" part="_yK5fwOSjEeOcDqFs2S97Dg"/>
+    </paletteCategories>
+  </palette>
+  <parts xsi:type="diagramconfigurator:NodePartConfiguration" xmi:id="_c_AjEOSeEeOgu8kAXSMCzQ" object="_yazBIOScEeOgu8kAXSMCzQ" type="Graphic With Label Figure">
+    <actions xmi:id="_qJ1loOSeEeOgu8kAXSMCzQ" prefix="Performer" menuBarGroup="" label="Set performer" icon=""/>
+  </parts>
+  <parts xsi:type="diagramconfigurator:NodePartConfiguration" xmi:id="_yK5fwOSjEeOcDqFs2S97Dg" object="_9gt98eSiEeOcDqFs2S97Dg" type="Graphic With Label Figure"/>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_yazBIOScEeOgu8kAXSMCzQ">
+    <genClass href="Models/ispem.genmodel#//spem/TaskDefinition"/>
+  </objects>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_0AvrQOScEeOgu8kAXSMCzQ">
+    <genClass href="Models/ispem.genmodel#//spem/MethodContentPackage"/>
+  </objects>
+  <objects xsi:type="diagramconfigurator:ModelObjectConfiguration" xmi:id="_9gt98eSiEeOcDqFs2S97Dg">
+    <genClass href="Models/ispem.genmodel#//spem/RoleDefinition"/>
+  </objects>
+  <genModel href="Models/ispem.genmodel#/"/>
+  <templateRootObject href="Models/ispem.genmodel#//spem/MethodContentPackage"/>
+  <editorConfigurator href="iSpem.editorconfigurator#_sWrKUbzCEeOiz_iWbv7YrQ"/>
+</diagramconfigurator:DiagramConfiguration>

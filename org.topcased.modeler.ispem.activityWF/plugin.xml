@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension point="org.topcased.modeler.templates">
+      <template
+            di="templates/org.topcased.modeler.ispem.activityWF/%name%.ispemdi"
+            model="templates/org.topcased.modeler.ispem.activityWF/%name%.ispem"
+            name="Activity Workflow"
+            id="org.topcased.modeler.ispem.activityWF.templates.org.topcased.modeler.ispem.activityWF"
+            editorId="org.topcased.modeler.ispem.editor.IspemEditor"/>
+   </extension>
+   
+   <extension point="org.topcased.modeler.diagrams">
+      <diagram
+            configuration="org.topcased.modeler.ispem.activityWF.ActivityWFConfiguration"
+            editorID="org.topcased.modeler.ispem.editor.IspemEditor"
+            id="org.topcased.modeler.ispem.activityWF"
+            name="Activity Workflow">
+         <enableFor class="org.topcased.ispem.Activity"/>
+      </diagram>
+	</extension>
+	
+	
+	<extension
+       point="org.topcased.modeler.topcasedPreferenceInitializer">
+    <preferenceInitializer
+          class="org.topcased.modeler.ispem.activityWF.preferences.ActivityWFDiagramTopcasedPreferenceInitializer"
+          editorId="org.topcased.modeler.ispem.editor.IspemEditor"
+          id="org.topcased.modeler.ispem.activityWF.preferences.ActivityWFTopcasedPreferenceInitializer">
+    </preferenceInitializer>
+ </extension>
+
+	<extension point="org.eclipse.ui.preferencePages">
+		<page
+			id="org.topcased.modeler.ispem.activityWF.preferences.ActivityWFDiagramPreferencePage"
+			category="org.topcased.modeler.ispem.preferences.IspemPreferencePage"
+			class="org.topcased.modeler.ispem.activityWF.preferences.ActivityWFDiagramPreferencePage"
+			name="ActivityWFDiagram"/>
+		<page
+			id="org.topcased.modeler.ispem.activityWF.preferences.TaskUsePreferencePage"
+			category="org.topcased.modeler.ispem.activityWF.preferences.ActivityWFDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.activityWF.preferences.TaskUsePreferencePage"
+			name="TaskUse"/>
+		<page
+			id="org.topcased.modeler.ispem.activityWF.preferences.ArtifactPreferencePage"
+			category="org.topcased.modeler.ispem.activityWF.preferences.ActivityWFDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.activityWF.preferences.ArtifactPreferencePage"
+			name="Artifact"/>
+		<page
+			id="org.topcased.modeler.ispem.activityWF.preferences.RoleUsePreferencePage"
+			category="org.topcased.modeler.ispem.activityWF.preferences.ActivityWFDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.activityWF.preferences.RoleUsePreferencePage"
+			name="RoleUse"/>
+		<page
+			id="org.topcased.modeler.ispem.activityWF.preferences.ProcessParameterOutPreferencePage"
+			category="org.topcased.modeler.ispem.activityWF.preferences.ActivityWFDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.activityWF.preferences.ProcessParameterOutPreferencePage"
+			name="ProcessParameterOut"/>
+		<page
+			id="org.topcased.modeler.ispem.activityWF.preferences.ProcessParameterInPreferencePage"
+			category="org.topcased.modeler.ispem.activityWF.preferences.ActivityWFDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.activityWF.preferences.ProcessParameterInPreferencePage"
+			name="ProcessParameterIn"/>
+		<page
+			id="org.topcased.modeler.ispem.activityWF.preferences.ProcessParameterInOutPreferencePage"
+			category="org.topcased.modeler.ispem.activityWF.preferences.ActivityWFDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.activityWF.preferences.ProcessParameterInOutPreferencePage"
+			name="ProcessParameterInOut"/>
+		<page
+			id="org.topcased.modeler.ispem.activityWF.preferences.ProcessPerformerPreferencePage"
+			category="org.topcased.modeler.ispem.activityWF.preferences.ActivityWFDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.activityWF.preferences.ProcessPerformerPreferencePage"
+			name="ProcessPerformer"/>
+		<page
+			id="org.topcased.modeler.ispem.activityWF.preferences.StartNodePreferencePage"
+			category="org.topcased.modeler.ispem.activityWF.preferences.ActivityWFDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.activityWF.preferences.StartNodePreferencePage"
+			name="StartNode"/>
+		<page
+			id="org.topcased.modeler.ispem.activityWF.preferences.EndNodePreferencePage"
+			category="org.topcased.modeler.ispem.activityWF.preferences.ActivityWFDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.activityWF.preferences.EndNodePreferencePage"
+			name="EndNode"/>
+		<page
+			id="org.topcased.modeler.ispem.activityWF.preferences.ForkNodePreferencePage"
+			category="org.topcased.modeler.ispem.activityWF.preferences.ActivityWFDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.activityWF.preferences.ForkNodePreferencePage"
+			name="ForkNode"/>
+		<page
+			id="org.topcased.modeler.ispem.activityWF.preferences.JoinNodePreferencePage"
+			category="org.topcased.modeler.ispem.activityWF.preferences.ActivityWFDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.activityWF.preferences.JoinNodePreferencePage"
+			name="JoinNode"/>
+		<page
+			id="org.topcased.modeler.ispem.activityWF.preferences.DecisionNodePreferencePage"
+			category="org.topcased.modeler.ispem.activityWF.preferences.ActivityWFDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.activityWF.preferences.DecisionNodePreferencePage"
+			name="DecisionNode"/>
+		<page
+			id="org.topcased.modeler.ispem.activityWF.preferences.EdgePreferencePage"
+			category="org.topcased.modeler.ispem.activityWF.preferences.ActivityWFDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.activityWF.preferences.EdgePreferencePage"
+			name="Edge"/>
+	</extension>
+
+	<extension point="org.eclipse.ui.propertyPages">
+		<page
+			id="org.topcased.modeler.ispem.activityWF.preferences.property.ActivityWFDiagramPreferencePage"
+			category="org.topcased.modeler.ispem.preferences.property.IspemPreferencePage"
+			class="org.topcased.modeler.ispem.activityWF.preferences.ActivityWFDiagramPreferencePage"
+			name="ActivityWFDiagram">       
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+		</page>
+		
+		<page
+			id="org.topcased.modeler.ispem.activityWF.preferences.property.TaskUsePreferencePage"
+			category="org.topcased.modeler.ispem.activityWF.preferences.property.ActivityWFDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.activityWF.preferences.TaskUsePreferencePage"
+			name="TaskUse">
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+		</page>
+    	
+		<page
+			id="org.topcased.modeler.ispem.activityWF.preferences.property.ArtifactPreferencePage"
+			category="org.topcased.modeler.ispem.activityWF.preferences.property.ActivityWFDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.activityWF.preferences.ArtifactPreferencePage"
+			name="Artifact">
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+		</page>
+    	
+		<page
+			id="org.topcased.modeler.ispem.activityWF.preferences.property.RoleUsePreferencePage"
+			category="org.topcased.modeler.ispem.activityWF.preferences.property.ActivityWFDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.activityWF.preferences.RoleUsePreferencePage"
+			name="RoleUse">
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+		</page>
+    	
+		<page
+			id="org.topcased.modeler.ispem.activityWF.preferences.property.ProcessParameterOutPreferencePage"
+			category="org.topcased.modeler.ispem.activityWF.preferences.property.ActivityWFDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.activityWF.preferences.ProcessParameterOutPreferencePage"
+			name="ProcessParameterOut">
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+		</page>
+    	
+		<page
+			id="org.topcased.modeler.ispem.activityWF.preferences.property.ProcessParameterInPreferencePage"
+			category="org.topcased.modeler.ispem.activityWF.preferences.property.ActivityWFDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.activityWF.preferences.ProcessParameterInPreferencePage"
+			name="ProcessParameterIn">
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+		</page>
+    	
+		<page
+			id="org.topcased.modeler.ispem.activityWF.preferences.property.ProcessParameterInOutPreferencePage"
+			category="org.topcased.modeler.ispem.activityWF.preferences.property.ActivityWFDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.activityWF.preferences.ProcessParameterInOutPreferencePage"
+			name="ProcessParameterInOut">
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+		</page>
+    	
+		<page
+			id="org.topcased.modeler.ispem.activityWF.preferences.property.ProcessPerformerPreferencePage"
+			category="org.topcased.modeler.ispem.activityWF.preferences.property.ActivityWFDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.activityWF.preferences.ProcessPerformerPreferencePage"
+			name="ProcessPerformer">
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+		</page>
+    	
+		<page
+			id="org.topcased.modeler.ispem.activityWF.preferences.property.StartNodePreferencePage"
+			category="org.topcased.modeler.ispem.activityWF.preferences.property.ActivityWFDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.activityWF.preferences.StartNodePreferencePage"
+			name="StartNode">
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+		</page>
+    	
+		<page
+			id="org.topcased.modeler.ispem.activityWF.preferences.property.EndNodePreferencePage"
+			category="org.topcased.modeler.ispem.activityWF.preferences.property.ActivityWFDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.activityWF.preferences.EndNodePreferencePage"
+			name="EndNode">
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+		</page>
+    	
+		<page
+			id="org.topcased.modeler.ispem.activityWF.preferences.property.ForkNodePreferencePage"
+			category="org.topcased.modeler.ispem.activityWF.preferences.property.ActivityWFDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.activityWF.preferences.ForkNodePreferencePage"
+			name="ForkNode">
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+		</page>
+    	
+		<page
+			id="org.topcased.modeler.ispem.activityWF.preferences.property.JoinNodePreferencePage"
+			category="org.topcased.modeler.ispem.activityWF.preferences.property.ActivityWFDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.activityWF.preferences.JoinNodePreferencePage"
+			name="JoinNode">
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+		</page>
+    	
+		<page
+			id="org.topcased.modeler.ispem.activityWF.preferences.property.DecisionNodePreferencePage"
+			category="org.topcased.modeler.ispem.activityWF.preferences.property.ActivityWFDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.activityWF.preferences.DecisionNodePreferencePage"
+			name="DecisionNode">
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+		</page>
+    	
+		<page
+			id="org.topcased.modeler.ispem.activityWF.preferences.property.EdgePreferencePage"
+			category="org.topcased.modeler.ispem.activityWF.preferences.property.ActivityWFDiagramPreferencePage"
+			class="org.topcased.modeler.ispem.activityWF.preferences.EdgePreferencePage"
+			name="Edge">
+			<enabledWhen>
+				<adapt type="org.eclipse.core.resources.IProject"/>
+			</enabledWhen>
+		</page>
+    	
+	</extension>
+ <extension
+       point="org.eclipse.ui.popupMenus">
+    <objectContribution
+          id="org.topcased.modeler.ispem.activityWF.contribution1"
+          objectClass="org.topcased.modeler.ispem.activityWF.edit.ActivityWFDiagramEditPart">
+       <menu
+             id="org.topcased.modeler.ispem.activityWF.menu1"
+             label="Reuse Method Content"
+             path="additions">
+          <separator
+                name="group1">
+          </separator>
+       </menu>
+       <action
+             class="org.topcased.modeler.ispem.activityWF.actions.ReuseTaskDefinitionAction"
+             enablesFor="1"
+             id="org.topcased.modeler.ispem.activityWF.ReuseTaskDefinitionAction"
+             label="Reuse Task Definition"
+             menubarPath="org.topcased.modeler.ispem.activityWF.menu1/group1">
+       </action>
+        <action
+             class="org.topcased.modeler.ispem.activityWF.actions.ReuseWorkProductDefinitionAction"
+             enablesFor="1"
+             id="org.topcased.modeler.ispem.activityWF.ReuseWorkProductDefinitionAction"
+             label="Reuse Work product Definition"
+             menubarPath="org.topcased.modeler.ispem.activityWF.menu1/group1">
+       </action>
+    </objectContribution>
+ </extension>
+
+</plugin>

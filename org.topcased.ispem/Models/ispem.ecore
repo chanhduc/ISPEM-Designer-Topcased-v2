@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="ispem"
+    nsURI="http://www.topcased.org/ispem" nsPrefix="ispem">
+  <eAnnotations source="Constraint" references="spem2.ecore#//Default_TaskDefinitionParameter">
+    <details key="TaskDefinition_ArtifactDefinition" value="One task definition must be related with artifact definitions having the respective level (Domain or Method)"/>
+    <details key="Artifact_ArtifactDefinition" value="One artifact must use one artifact definition with respective level (domain or method)"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="EngineeringDomain" eSuperTypes="#//OntologyLinkedElement spem2.ecore#//MethodContentElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="viewpoints" upperBound="-1"
+        eType="#//Viewpoint" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="defines" upperBound="-1"
+        eType="#//DomainTaskDefinition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="realizes" upperBound="-1"
+        eType="#//DevelopmentMethod"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ToolDefinition" eSuperTypes="spem2.ecore#//ToolDefinition #//OntologyLinkedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="supportedEngineringDomain"
+        lowerBound="1" upperBound="-1" eType="#//EngineeringDomain"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="supportedRepresentativeLanguage"
+        upperBound="-1" eType="#//RepresentativeLanguage"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Viewpoint" eSuperTypes="#//OntologyLinkedElement spem2.ecore#//MethodContentElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="caracterizes" upperBound="-1"
+        eType="#//DomainArtifactDefinition" eOpposite="#//DomainArtifactDefinition/organized"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TaskDefinition" eSuperTypes="#//OntologyLinkedElement spem2.ecore#//TaskDefinition"/>
+  <eClassifiers xsi:type="ecore:EClass" name="WorkProductDefinition" eSuperTypes="#//OntologyLinkedElement spem2.ecore#//WorkProductDefinition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rootElement" eType="ecore:EClass platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="usedReferences" upperBound="-1"
+        eType="ecore:EClass platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="metamodel" eType="#//MetaModel"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ISPEMMethodLibrary" eSuperTypes="spem2.ecore#//MethodLibrary"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DevelopmentMethod" eSuperTypes="#//OntologyLinkedElement spem2.ecore#//Category">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="supports" upperBound="-1"
+        eType="#//Viewpoint"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="defines" eType="#//MethodTaskDefinition"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EngineeringDomainPackage" eSuperTypes="spem2.ecore#//MethodContentPackage"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DevelopmentMethodPackage" eSuperTypes="spem2.ecore#//uma/CategoryPackage"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OntologyLinkedElement" eSuperTypes="spem2.ecore#//DescribableElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uri" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="http://www.example.org"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Level">
+    <eLiterals name="Method" value="2" literal="Method"/>
+    <eLiterals name="Domain" value="1"/>
+    <eLiterals name="Language" value="3" literal="Language"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ArtifactDefinitionPackage" eSuperTypes="spem2.ecore#//uma/WorkProductDefinitionPackage"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Artifact" eSuperTypes="spem2.ecore#//uma/Artifact #//OntologyLinkedElement spem2.ecore#//WorkProductUse">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" eType="#//Level"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Activity" eSuperTypes="spem2.ecore#//Activity #//OntologyLinkedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="context" eType="#//EngineeringDomain"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ArtifactTransformation" eSuperTypes="spem2.ecore#//BreakdownElement #//OntologyLinkedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Artifact"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Artifact"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="TransformationFile" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DomainTaskDefinition" eSuperTypes="#//TaskDefinition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="specializes" upperBound="-1"
+        eType="#//MethodTaskDefinition" eOpposite="#//MethodTaskDefinition/specializedBy"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="applies" upperBound="-1"
+        eType="#//Viewpoint"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MethodTaskDefinition" eSuperTypes="#//TaskDefinition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="specializedBy" eType="#//DomainTaskDefinition"
+        eOpposite="#//DomainTaskDefinition/specializes"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="specializes" upperBound="-1"
+        eType="#//LanguageTaskDefinition" eOpposite="#//LanguageTaskDefinition/specializedBy"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DomainArtifactDefinition" eSuperTypes="#//ArtifactDefinition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="specializes" upperBound="-1"
+        eType="#//MethodArtifactDefinition" eOpposite="#//MethodArtifactDefinition/specializedBy"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="organized" upperBound="-1"
+        eType="#//Viewpoint" eOpposite="#//Viewpoint/caracterizes"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MethodArtifactDefinition" eSuperTypes="#//ArtifactDefinition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="specializedBy" eType="#//DomainArtifactDefinition"
+        eOpposite="#//DomainArtifactDefinition/specializes"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="specializes" upperBound="-1"
+        eType="#//LanguageArtifactDefinition" eOpposite="#//LanguageArtifactDefinition/specializedBy"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DomainContentPackage" eSuperTypes="spem2.ecore#//MethodContentPackage">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relatedDomain" eType="#//EngineeringDomain"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DevelopmentMethodContentPackage" eSuperTypes="spem2.ecore#//MethodContentPackage">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relatedMethod" eType="#//DevelopmentMethod"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Process" eSuperTypes="spem2.ecore#//uma/CapabilityPattern">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" eType="#//Level"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LanguageArtifactDefinition" eSuperTypes="#//ArtifactDefinition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="specializedBy" eType="#//MethodArtifactDefinition"
+        eOpposite="#//MethodArtifactDefinition/specializes"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="representedBy" eType="#//RepresentativeLanguage"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LanguageTaskDefinition" eSuperTypes="#//TaskDefinition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="specializedBy" eType="#//MethodTaskDefinition"
+        eOpposite="#//MethodTaskDefinition/specializes"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DevelopmentMethodWithLanguageContentPackage"
+      eSuperTypes="spem2.ecore#//MethodContentPackage">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relatedLanguage" eType="#//RepresentativeLanguage"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relatedMethod" eType="#//DevelopmentMethod"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RepresentativeLanguage" eSuperTypes="spem2.ecore#//Category #//OntologyLinkedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="metamodel" eType="#//MetaModel"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RepresentLanguagePackage" eSuperTypes="spem2.ecore#//uma/CategoryPackage"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MetaModelPackage" eSuperTypes="spem2.ecore#//MethodContentPackage"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MetaModel" eSuperTypes="spem2.ecore#//MethodContentElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ePackage" eType="ecore:EClass platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EPackage"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EClassesRelation" eSuperTypes="spem2.ecore#//MethodContentElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="relationType" eType="#//ENamedElementRelationKind"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EReferencesRelation" eSuperTypes="spem2.ecore#//MethodContentElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EReference"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="relationType" eType="#//ENamedElementRelationKind"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ENamedElementRelationKind">
+    <eLiterals name="specialization"/>
+    <eLiterals name="representation" value="1"/>
+    <eLiterals name="correspondence" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ArtifactDefinition" eSuperTypes="#//WorkProductDefinition"/>
+</ecore:EPackage>
